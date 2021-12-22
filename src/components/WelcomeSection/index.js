@@ -41,7 +41,6 @@ const WelcomeSection = () => {
                 <h2>Hoş Geldiniz.</h2>
                 <h3>Milyonlarca film, TV şovu ve keşfedilecek kişi. Şimdi keşfedin.</h3>
             </div>
-
             <div className='search'>
                 <input type="text" ref={searchedWord} placeholder="Film, dizi, kişi ara..." onClick={handleSearchInputClick}/>
                 <input type="submit" value="Search" onClick={handleSearch} />        
@@ -56,9 +55,7 @@ const WelcomeSection = () => {
                         )
                         }
                     </ul>
-            }
-            
-         
+            }       
         </section>
     )
 }

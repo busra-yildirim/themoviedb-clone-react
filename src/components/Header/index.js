@@ -1,13 +1,17 @@
 import logoImage from "../../assets/logo.svg";
 import search from "../../assets/search-icon.svg";
-
 import "./index.scss"
+import { useHistory } from "react-router-dom";
 
 const Header = () => {
+    let history = useHistory();
+    const returnToHome = () => {
+        history.push("/");
+    }
     return(
         <header>
             <nav className="navigation">
-            <div className="logo">
+            <div className="logo" onClick={returnToHome}>
                 <img src={logoImage} alt="logo"/>
             </div>
                 <div>
