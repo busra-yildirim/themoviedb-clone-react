@@ -1,0 +1,34 @@
+$headerBackgroundColor: #032541;
+$headerTextColor: #ffffff;
+$fontSize: 1em;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    background-color: $headerBackgroundColor;
+    color: $headerTextColor;
+    font-size: $fontSize;
+    height: 64px;
+    padding: 0 40px;
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        .logo {
+            width: 154px;
+            height: 20px;
+        }
+    }
+    .left-side {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        .search-icon {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
