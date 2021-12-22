@@ -1,3 +1,4 @@
+## Themoviedb Clone Project
 
 This repository contains the clone of themoviedb website. You can view two pages which home and movie detail. 
 
