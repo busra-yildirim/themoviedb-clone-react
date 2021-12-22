@@ -6,7 +6,7 @@ const CardItem = ({item}) => {
     let history = useHistory();
     
     const showCardDetail = () => {
-        history.push("/movie-detail/" + item.id);
+        history.push("/detail/" + item.id);
     }
     return(
         

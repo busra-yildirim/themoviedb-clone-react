@@ -11,6 +11,7 @@ const WelcomeSection = () => {
 
     useEffect(() => {   
         getSearchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const getSearchData = () => {
@@ -18,7 +19,6 @@ const WelcomeSection = () => {
         if(allSearchedData && allSearchedData.length){
             setSearchedData(allSearchedData.slice(maxSearchItemCount));
         } 
-        console.log("search", searchedData)
     }
     const handleSearch = () => {
         const allSearchedData = JSON.parse(localStorage.getItem("searchedData")) || [];

@@ -18,7 +18,7 @@ function App() {
             <Route exact path="/">      
                 <Home/>
             </Route>
-            <Route path="/movie-detail/:id">            
+            <Route path="/detail/:id">            
                 <CardDetail/>         
             </Route>
           </MainLayout>

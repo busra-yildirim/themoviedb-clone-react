@@ -15,7 +15,6 @@ const CardItemDetail = () => {
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=f188aeb2c28b22be38a7bc4fe5fa8caf`)
         .then(response => response.json())
         .then(data => {
-            console.log("idlere göre",data);
             showSelectedMovie(data)
         });
     }, [id]);
@@ -24,9 +23,7 @@ const CardItemDetail = () => {
         let allFetchData = JSON.parse(localStorage.getItem("fetchData"));
         let selectedMovie = allFetchData.filter(item => item.id === data.id)
         setMovieImage(selectedMovie[0])
-        console.log("selected",selectedMovie)
     }
-    console.log("testtt",movieImage)
     return(
        <div>
            <div className="bar-wrapper">
@@ -36,17 +33,16 @@ const CardItemDetail = () => {
                     <div>Hayranlar</div>
                     <div>Paylaş</div>
                 </div>
-           </div>
-           
-           <section>
+           </div> 
+           { movieImage ? <section>
                <div className="movie-card" style={{backgroundImage: `url(${baseImageUrl}${movieImage.poster_path})`}}>
                </div>
                <div className="movie-info-wrapper">
                    <div className="movie-title">
-                   {movieImage.title}
+                   {movieImage.title ? movieImage.title : movieImage.name}
                    </div>
                    <div>
-                       ({movieImage.release_date})
+                       ({movieImage.release_date ? movieImage.release_date : movieImage.first_air_date})
                    </div>
                    <div className="icon-layout">
                         <div className="point">
@@ -73,7 +69,8 @@ const CardItemDetail = () => {
                        <div>{movieImage.overview}</div>
                    </div>
                </div>
-           </section>
+           </section> : <div>The movie or tv series can't be found..</div> }
+           
        </div>
     )
 }

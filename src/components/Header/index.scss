@@ -1,6 +1,7 @@
 $headerBackgroundColor: #032541;
 $headerTextColor: #ffffff;
 $fontSize: 1em;
+
 header {
     display: flex;
     justify-content: space-between;
@@ -9,7 +10,11 @@ header {
     color: $headerTextColor;
     font-size: $fontSize;
     height: 64px;
-    padding: 0 40px;
+    padding: 0 100px;
+
+    @media screen and (max-width: 1200px) {
+        padding: 0;
+    }
     nav {
         display: flex;
         justify-content: center;
