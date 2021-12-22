@@ -2,7 +2,7 @@
 
 This repository contains the clone of themoviedb website. You can view two pages which home and movie detail. 
 
-
+You can [click here](https://themoviedb-clone-react.netlify.app/) for live demo
 
 ## Using Technologies
 
